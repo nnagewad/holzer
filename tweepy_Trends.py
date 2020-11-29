@@ -11,14 +11,17 @@ locations = api.trends_available()
 location_list = []
 
 for location in locations:
-    location_name = location['name']
-    location_list.append(location_name)
+    city_name = location['name']
+    country_name = location['country']
+    location_list.append(city_name + ", " + country_name)
+    
 
 WAIT_SECONDS = 1
 
 def locationOutput():
     random_location = random.choice(location_list)
-    print(random_location)
+    selected_location = str(random_location)
+    print(selected_location)
     threading.Timer(WAIT_SECONDS, locationOutput).start()
 
 locationOutput()
