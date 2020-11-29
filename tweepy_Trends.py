@@ -8,19 +8,20 @@ auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCE
 api = tweepy.API(auth)
 locations = api.trends_available()
 
+woeid_list = []
 location_list = []
 
 for location in locations:
+    woeid_number = location['woeid']
     city_name = location['name']
     country_name = location['country']
+    woeid_list.append(woeid_number)
     location_list.append(city_name + ", " + country_name)
-    
 
 WAIT_SECONDS = 1
 
 def locationOutput():
-    random_location = random.choice(location_list)
-    selected_location = str(random_location)
+    selected_location = random.choice(location_list)
     print(selected_location)
     threading.Timer(WAIT_SECONDS, locationOutput).start()
 
