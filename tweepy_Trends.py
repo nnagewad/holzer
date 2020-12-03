@@ -23,8 +23,6 @@ for location in locations:
 
 WAIT_SECONDS = 1
 
-# def tweet_generator():
-
 def random_location_generator():
     selected_location = random.choice(location_list)
     locationArray = selected_location.rsplit("woeid: ")
