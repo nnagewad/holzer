@@ -23,15 +23,19 @@ for location in locations:
 
 WAIT_SECONDS = 1
 
-def tweet_generator():
+# def tweet_generator():
+
+def random_location_generator():
     selected_location = random.choice(location_list)
     locationArray = selected_location.rsplit("woeid: ")
-    print(locationArray[0])
-    print(locationArray[1])
+    location = locationArray[0]
+    woeid = locationArray[1]
+    print(location)
+    print(woeid)
 
-def print_tweet():
+def print_location():
     os.system('clear')
-    tweet_generator()
-    threading.Timer(WAIT_SECONDS, print_tweet).start()
+    random_location_generator()
+    threading.Timer(WAIT_SECONDS, print_location).start()
 
-print_tweet()
+print_location()
