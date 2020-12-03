@@ -2,6 +2,7 @@ import tweepy
 import twitter_credentials
 import random
 import time, threading
+import os
 
 auth = tweepy.OAuthHandler(twitter_credentials.API_KEY, twitter_credentials.API_SECRET)
 auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
@@ -22,11 +23,15 @@ for location in locations:
 
 WAIT_SECONDS = 1
 
-def locationFunction():
+def tweet_generator():
     selected_location = random.choice(location_list)
     locationArray = selected_location.rsplit("woeid: ")
     print(locationArray[0])
     print(locationArray[1])
-    threading.Timer(WAIT_SECONDS, locationFunction).start()
 
-locationFunction()
+def print_tweet():
+    os.system('clear')
+    tweet_generator()
+    threading.Timer(WAIT_SECONDS, print_tweet).start()
+
+print_tweet()
