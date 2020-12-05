@@ -12,28 +12,11 @@ locations = api.trends_available()
 
 location_list = []
 
+city_list = []
+country_list = []
+
 for location in locations:
     city_name = location['name']
     country_name = location['country']
-    woeid_number = location['woeid']
-    if city_name == country_name:
-        location_list.append(country_name + "woeid: " + str(woeid_number))
-    else:
-        location_list.append(city_name + ", " + country_name + "woeid: " + str(woeid_number))
-
-def random_location_generator():
-    selected_location = random.choice(location_list)
-    locationArray = selected_location.rsplit("woeid: ")
-    location = locationArray[0]
-    woeid = locationArray[1]
-    print(location)
-    print(woeid)
-
-def print_location():
-    os.system('clear')
-    reset = random.randint(1,10)*.5
-    random_location_generator()
-    print(reset)
-    threading.Timer(reset, print_location).start()
-
-print_location()
+    city_list.append(city_name)
+    country_list.append(country_name)
