@@ -39,3 +39,6 @@ def random_country_generator():
     print(random_country)
     random_count = random.randint(1,10)*.25
     threading.Timer(random_count, random_country_generator).start()
+
+cities = random_city_generator
+counties = random_country_generator
