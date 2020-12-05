@@ -52,5 +52,5 @@ def display_city():
 def display_country():
     return random_country_generator()
 
-# display_city()
-# display_country()
+cities = display_city()
+countries = display_country()
