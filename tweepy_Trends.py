@@ -36,8 +36,7 @@ def random_country():
 
 def random_city_generator():
     os.system('clear')
-    random_city = random.choice(city_list)
-    print(random_city)
+    random_city()
     random_count = random.randint(1,10)*.25
     threading.Timer(random_count, random_city_generator).start()
 
