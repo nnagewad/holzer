@@ -21,8 +21,6 @@ for location in locations:
     else:
         location_list.append(city_name + ", " + country_name + "woeid: " + str(woeid_number))
 
-WAIT_SECONDS = 1
-
 def random_location_generator():
     selected_location = random.choice(location_list)
     locationArray = selected_location.rsplit("woeid: ")
@@ -33,7 +31,9 @@ def random_location_generator():
 
 def print_location():
     os.system('clear')
+    reset = random.randint(1,10)*.5
     random_location_generator()
-    threading.Timer(WAIT_SECONDS, print_location).start()
+    print(reset)
+    threading.Timer(reset, print_location).start()
 
 print_location()
