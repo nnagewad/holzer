@@ -20,3 +20,9 @@ for location in locations:
     country_name = location['country']
     city_list.append(city_name)
     country_list.append(country_name)
+
+country_list = list(dict.fromkeys(country_list))
+city_list = set(city_list) - set(country_list)
+
+country_list.remove('')
+city_list.remove('Worldwide')
