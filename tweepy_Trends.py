@@ -10,10 +10,8 @@ api = tweepy.API(auth)
 
 locations = api.trends_available()
 
-location_list = []
-
-city_list = []
 country_list = []
+city_list = []
 
 for location in locations:
     city_name = location['name']
@@ -23,6 +21,7 @@ for location in locations:
 
 country_list = list(dict.fromkeys(country_list))
 city_list = set(city_list) - set(country_list)
+city_list = list(city_list)
 
 country_list.remove('')
 city_list.remove('Worldwide')
