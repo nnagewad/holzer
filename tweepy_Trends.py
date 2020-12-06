@@ -1,15 +1,11 @@
 import tweepy
 import twitter_credentials
-import random
-import time, threading
-import os
 
 auth = tweepy.OAuthHandler(twitter_credentials.API_KEY, twitter_credentials.API_SECRET)
 auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 locations = api.trends_available()
-
 country_list = []
 city_list = []
 
@@ -25,3 +21,5 @@ city_list = list(city_list)
 
 country_list.remove('')
 city_list.remove('Worldwide')
+
+print(city_list)
