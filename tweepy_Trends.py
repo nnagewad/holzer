@@ -25,20 +25,3 @@ city_list = list(city_list)
 
 country_list.remove('')
 city_list.remove('Worldwide')
-
-def random_city_generator():
-    os.system('clear')
-    random_city = random.choice(city_list)
-    print(random_city)
-    random_count = random.randint(1,10)*.25
-    threading.Timer(random_count, random_city_generator).start()
-
-def random_country_generator():
-    os.system('clear')
-    random_country = random.choice(country_list)
-    print(random_country)
-    random_count = random.randint(1,10)*.25
-    threading.Timer(random_count, random_country_generator).start()
-
-cities = random_city_generator
-counties = random_country_generator
