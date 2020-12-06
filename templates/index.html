@@ -25,19 +25,26 @@
         <script>
             const cities = {{cityList|tojson}};
             const countries = {{countryList|tojson}};
-            const randomTime = Math.floor(Math.random() * 4250) + 1;
+            const cityRefresh = refresh();
+            const countryRefresh = refresh();
 
-             setInterval(function(){
+            function refresh() {
+                return Math.floor(Math.random() * 5000) + 1;
+            }
+
+            setInterval(function(){
                 const randomCity = randomGenerator(cities);
-                const randomCountry = randomGenerator(countries);
-
-                function randomGenerator(x) {
-                    return x[Math.floor(Math.random()*x.length)];
-                }
-
                 document.getElementById("city").innerHTML = `${randomCity},`
+            }, cityRefresh);
+
+            setInterval(function(){
+                const randomCountry = randomGenerator(countries);
                 document.getElementById("country").innerHTML = randomCountry
-             }, randomTime);
+            }, countryRefresh);
+
+            function randomGenerator(x) {
+                return x[Math.floor(Math.random()*x.length)];
+            }
 
         </script>
     </body>
