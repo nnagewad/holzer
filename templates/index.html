@@ -23,15 +23,17 @@
         <script>
             const cities = {{cityList|tojson}};
             const countries = {{countryList|tojson}};
-            let randomTime = Math.floor(Math.random() * 2500) + 1;
-
-            setInterval(function(){
-                let randomCity = cities[Math.floor(Math.random()*cities.length)];
-                document.getElementById("city").innerHTML = randomCity
-             }, randomTime);
+            const randomTime = Math.floor(Math.random() * 5000) + 1;
 
              setInterval(function(){
-                let randomCountry = countries[Math.floor(Math.random()*countries.length)];
+                const randomCity = randomGenerator(cities);
+                const randomCountry = randomGenerator(countries);
+
+                function randomGenerator(x) {
+                    return x[Math.floor(Math.random()*x.length)];
+                }
+
+                document.getElementById("city").innerHTML = randomCity
                 document.getElementById("country").innerHTML = randomCountry
              }, randomTime);
 
