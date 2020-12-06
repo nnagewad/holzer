@@ -17,22 +17,24 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>
-            <span id="city">cities</span>, <span id="country">countries</span>
+            <span id="city">city</span>, <span id="country">country</span>
         </h1>
         
         <script>
             const cities = {{cityList|tojson}};
-            const countries = {{countryList|tojson}}
+            const countries = {{countryList|tojson}};
+            let randomIntervalCities = Math.floor(Math.random() * 2500) + 1;
+            let randomIntervalCounties = Math.floor(Math.random() * 2500) + 1;
 
-            let randomCity = randomGenerator(cities);
-            let randomCountry = randomGenerator(countries);
+            setInterval(function(){
+                let randomCity = cities[Math.floor(Math.random()*cities.length)];
+                document.getElementById("city").innerHTML = randomCity
+             }, randomIntervalCities);
 
-            function randomGenerator(x) {
-                return x[Math.floor(Math.random()*x.length)];
-            }
-
-            document.getElementById("city").innerHTML = randomCity
-            document.getElementById("country").innerHTML = randomCountry
+             setInterval(function(){
+                let randomCountry = countries[Math.floor(Math.random()*countries.length)];
+                document.getElementById("country").innerHTML = randomCountry
+             }, randomIntervalCounties);
 
         </script>
     </body>
