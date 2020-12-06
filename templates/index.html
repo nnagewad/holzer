@@ -23,18 +23,17 @@
         <script>
             const cities = {{cityList|tojson}};
             const countries = {{countryList|tojson}};
-            let randomIntervalCities = Math.floor(Math.random() * 2500) + 1;
-            let randomIntervalCounties = Math.floor(Math.random() * 2500) + 1;
+            let randomTime = Math.floor(Math.random() * 2500) + 1;
 
             setInterval(function(){
                 let randomCity = cities[Math.floor(Math.random()*cities.length)];
                 document.getElementById("city").innerHTML = randomCity
-             }, randomIntervalCities);
+             }, randomTime);
 
              setInterval(function(){
                 let randomCountry = countries[Math.floor(Math.random()*countries.length)];
                 document.getElementById("country").innerHTML = randomCountry
-             }, randomIntervalCounties);
+             }, randomTime);
 
         </script>
     </body>
