@@ -21,5 +21,3 @@ city_list = list(city_list)
 
 country_list.remove('')
 city_list.remove('Worldwide')
-
-print(city_list)
