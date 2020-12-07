@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>U2 can be like Holzer</title>
-        <meta name="description" content="">
+        <meta name="description" content="This art project was inspired by the works of Jenny Holzer and Bruce Nauman">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
@@ -37,7 +37,7 @@
             setInterval(randomCountry, countryRefresh);
 
             function randomCity() {
-                document.getElementById("city").innerHTML = `${randomGenerator(cities)},`
+                document.getElementById("city").innerHTML = randomGenerator(cities);
             }
 
             function randomCountry() {
