@@ -7,9 +7,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>U2 can be like Holzer</title>
+        <title>Random location generator</title>
         <meta name="description" content="This art project was inspired by the works of Jenny Holzer and Bruce Nauman">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{ url_for('static', filename='/favicon-16x16.png') }}">
+        <link rel="manifest" href="{ url_for('static', filename='/site.webmanifest') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
@@ -29,7 +33,7 @@
             const countryRefresh = refresh();
 
             function refresh() {
-                return Math.floor(Math.random() * 10000) + 1;
+                return Math.floor(Math.random() * 25000) + 1;
             }
 
             setInterval(randomCity, cityRefresh);
