@@ -15,8 +15,8 @@
 - [Flask](https://palletsprojects.com/p/flask/)
 - [Heroku](https://www.heroku.com/)
 
-## Exhibition
-- Ideally, using an industrial projector, having this projected in front of buildings located in greatly populous area within any metropolitan city around the world.
+## Exhibition instructions
+- Using an industrial projector, having this projected in front of a building located in greatly populous area within any metropolitan city around the world.
 
 ## Live demo
 - https://random-location-generator.herokuapp.com/
