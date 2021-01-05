@@ -1,0 +1,34 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: calc(10vw + (20 - 10) * ((100vw - 375px) / (3840 - 375)));
+}
+
+#city {
+    color: #ff69b4;
+}
