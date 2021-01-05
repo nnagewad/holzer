@@ -16,10 +16,6 @@
 - [Twitter Developer](https://developer.twitter.com/)
 - [Tweepy](https://www.tweepy.org/)
 - [Flask](https://palletsprojects.com/p/flask/)
-- [Heroku](https://www.heroku.com/)
 
 ## Exhibition instructions
 - Using an industrial projector, having this projected in front of a building located in greatly populous area within any metropolitan city around the world.
-
-## Live demo
-- https://random-location-generator.herokuapp.com/
