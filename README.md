@@ -21,4 +21,4 @@
 - Using an industrial projector, having this projected in front of a building located in greatly populous area within any metropolitan city around the world.
 
 ## Live demo
-- TBD
+- https://random-location-generator.netlify.app/
